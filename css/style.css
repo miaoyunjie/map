@@ -82,12 +82,17 @@ li {
 	height: calc(100% - 45px);
 }
 
+#menu-btn {
+    font-size: 2em;
+    color: white;
+}
+
 /*设置优先级*/
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 414px) {
 	#list {
-		display: none!important;
+		display: none !important;
 	}
 	#right {
-		width: 100%!important;
+		width: 100% !important;
 	}
 }
