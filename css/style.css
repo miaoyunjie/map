@@ -82,11 +82,12 @@ li {
 	height: calc(100% - 45px);
 }
 
-@media only screen and (max-width: 750px) {
+/*设置优先级*/
+@media only screen and (max-width: 500px) {
 	#list {
-		display: none;
+		display: none!important;
 	}
 	#right {
-		width: 100%;
+		width: 100%!important;
 	}
 }

@@ -6,13 +6,15 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div id="list">
+	<div id="list" data-bind="style:{display: changeList() ? 'none' : 'block'}">
 		<h3>上海 地区</h3>
-		<input type="text" id="suggestId" data-bind="click: inputClick">
-		<input type="submit" id="submit" data-bind="click: clickSubmit" value="筛选">
-		<ul></ul>
+		<input type="text" id="suggestId" data-bind="click: inputClick, value: textInput">
+		<input type="submit" id="submit" value="筛选" data-bind="click: clickSubmit">
+		<ul data-bind="foreach: dataList">
+			<li data-bind="text: name ,click: $parent.listHandler"></li>
+		</ul>
 	</div>
-	<div id="right">
+	<div id="right" data-bind="style:{width: changeList() ? '100%' : 'calc(100% - 175px)'}">
 		<div id="top">
 			<img src="img/list.png" data-bind="click: clickImage">
 		</div>
